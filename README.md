@@ -5,6 +5,7 @@ Small Script to prevent unload, managing multiple "lockers"
 
 import unload from unloadLock/index.js
 
+```js
 input.addEventListener('input', event=>{
   const savePromise = safeTheValue(input.value);
   unload.lock(savePromise);
@@ -18,4 +19,5 @@ input.addEventListener('input', event=>{
     release();
   });
 });
+```
 
