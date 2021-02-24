@@ -4,12 +4,12 @@ Unload Manager, a small script to prevent unload
 - ~200 Bytes (compressed, brotli)
 - Easy API
 
-# test
+# Test
 
 <a href="https://raw.githack.com/nuxodin/unloadLock/main/test.html">test-page</a>
 
 
-# ussage
+# Ussage
 
 ```js
 import unload from 'https://cdn.jsdelivr.net/gh/nuxodin/unloadLock@1.0.0/index.min.js';
@@ -28,3 +28,7 @@ input.addEventListener('input', event=>{
   });
 });
 ```
+
+# Help
+I am glad for any help and be it only text corrections.  
+Share and Star, tnx!
