@@ -11,9 +11,9 @@ Unload Manager, a small script to prevent unload
 
 # ussage
 
-import unload from unloadLock/index.js
-
 ```js
+import unload from 'https://cdn.jsdelivr.net/gh/nuxodin/unloadLock@1.0.0/index.min.js';
+
 input.addEventListener('input', event=>{
   const savePromise = safeTheValue(input.value);
   unload.lock(savePromise);
