@@ -1,5 +1,12 @@
 # unloadLock
-Small Script to prevent unload, managing multiple "lockers"
+Unload Manager, a small script to prevent unload
+- managing multiple "lockers"
+- under 200 Bytes (compressed, brotli)
+
+# test
+
+<a href="./test.html">test-page</a>
+
 
 # ussage
 
@@ -20,4 +27,3 @@ input.addEventListener('input', event=>{
   });
 });
 ```
-

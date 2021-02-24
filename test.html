@@ -1,34 +1,63 @@
+
+<div>
+  <input type=checkbox id=checkbox1> Using unload.setLock()
+</div>
+
+<br>
+
+<div>
+  <input id=input1> using promise-argument (3 seconds pseudo save)
+</div>
+
+<br>
+
+<div>
+  <input id=input2> using returned release-function (3 seconds pseudo save)
+</div>
+
+<h1 id=text></h1>
+
+
 <script type=module>
-import unload from 'https://cdn.jsdelivr.net/gh/nuxodin/unloadLock/index.js';
+import unload from './index.js';
 
 checkbox1.addEventListener('change', function(e){
   unload.setLock(this, this.checked);
-})
-
-checkbox2.addEventListener('change', function(e){
-  unload.setLock(this, this.checked);
-})
-
-input1.addEventListener('input', async function(e){
-  const resolve = unload.lock();
-
-  this.classList.add('pending');
-
-  await new Promise(resolve=>setTimeout(resolve,2000));
-
-  this.classList.remove('pending');
-
-  resolve();
 });
 
+input1.addEventListener('input', e=>{
+  unload.lock(delay3());
+});
+
+input2.addEventListener('input', async e=>{
+  const release = unload.lock();
+  await delay3();
+  release();
+});
+
+unload.addEventListener('lock',function(){
+  document.body.style.backgroundColor = 'orange';
+  text.innerHTML = 'unload prevented, try to reload'
+})
+unload.addEventListener('release',function(){
+  document.body.style.backgroundColor = '#9f9';
+  text.innerHTML = 'you can reload'
+})
+
+function delay3(){
+  return new Promise(resolve=>setTimeout(resolve,3000));
+}
 </script>
 
-<input type=checkbox id=checkbox1>
-<input type=checkbox id=checkbox2>
-<input id=input1>
-
 <style>
-  .pending {
-    border-color:orange;
+  script {
+    display:block;
+    margin:auto;
+    max-width:max-content;
+    overflow:auto;
+    white-space: pre-wrap;
+    color:#777;
+    padding:1rem;
+    border:1px solid;
   }
-</style>
+</script>
