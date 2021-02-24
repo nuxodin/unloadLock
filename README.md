@@ -2,6 +2,7 @@
 Unload Manager, a small script to prevent unload
 - managing multiple "lockers"
 - ~200 Bytes (compressed, brotli)
+- Easy API
 
 # test
 
