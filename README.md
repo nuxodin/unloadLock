@@ -1,7 +1,7 @@
 # unloadLock
 Unload Manager, a small script to prevent unload
 - managing multiple "lockers"
-- under 200 Bytes (compressed, brotli)
+- ~200 Bytes (compressed, brotli)
 
 # test
 
