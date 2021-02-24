@@ -21,7 +21,7 @@ input.addEventListener('input', event=>{
   unload.lock(savePromise);
 });
 
-// or use the returned releas-funtion
+// or use the returned release-funtion
 
 input.addEventListener('input', event=>{
   const release = unload.lock();
