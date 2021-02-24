@@ -23,9 +23,7 @@ input.addEventListener('input', event=>{
 
 input.addEventListener('input', event=>{
   const release = unload.lock();
-  safeTheValue(input.value).then(function(){
-    release();
-  });
+  safeTheValue(input.value).finally(release);
 });
 ```
 
