@@ -14,17 +14,26 @@ Unload Manager, a small script to prevent unload
 ```js
 import unload from 'https://cdn.jsdelivr.net/gh/nuxodin/unloadLock@1.0.0/index.min.js';
 
+// lock until a promise is pending
+
 input.addEventListener('input', event=>{
   const savePromise = safeTheValue(input.value);
   unload.lock(savePromise);
 });
 
-// or
+// or use the returned releas-funtion
 
 input.addEventListener('input', event=>{
   const release = unload.lock();
   safeTheValue(input.value).finally(release);
 });
+
+// lock / release by context
+
+checkbox.addEventListener('change', function(e){
+  unload.setLock(this, this.checked);
+});
+
 ```
 
 # Help
