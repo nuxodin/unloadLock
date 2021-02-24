@@ -6,7 +6,7 @@ Unload Manager, a small script to prevent unload
 
 # test
 
-<a href="./test.html">test-page</a>
+<a href="https://raw.githack.com/nuxodin/unloadLock/main/test.html">test-page</a>
 
 
 # ussage
