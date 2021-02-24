@@ -24,7 +24,7 @@ unload.lock = function(promise){
   if (promise) promise.finally(release);
   return release;
 };
-unload.setLock = function(context, state){
+unload.setLock = function(context, state){ // does someone use setLock?
   state ? add(context) : remove(context);
 };
 
