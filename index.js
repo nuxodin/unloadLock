@@ -1,3 +1,5 @@
+// does not work in ios safari: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event#browser_compatibility
+
 var lockers = new Set();
 
 addEventListener('beforeunload',e=>{
