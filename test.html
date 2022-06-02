@@ -1,19 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name=viewport content="width=device-width">
+    <title>unloadLock</title>
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/norm.css/norm.min.css">
+    <link rel=stylesheet href="https://cdn.jsdelivr.net/gh/u1ui/base.css/base.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/u1ui/u1/tests/test-init.js" type=module></script>
 
-<div>
+<body style="padding:2rem">
+
+<label>
   <input type=checkbox id=checkbox1> Using unload.setLock()
-</div>
+</label>
 
 <br>
+<br>
 
-<div>
+<label>
   <input id=input1> using promise-argument (3 seconds pseudo save)
-</div>
+</label>
 
 <br>
+<br>
 
-<div>
+<label>
   <input id=input2> using returned release-function (3 seconds pseudo save)
-</div>
+</label>
 
 <h1 id=text></h1>
 
@@ -54,8 +67,6 @@ function delay3(){
     display:block;
     margin:auto;
     max-width:max-content;
-    overflow:auto;
-    white-space: pre-wrap;
     color:#777;
     padding:1rem;
     border:1px solid;

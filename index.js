@@ -1,6 +1,6 @@
 // does not work in ios safari: https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeunload_event#browser_compatibility
 
-var lockers = new Set();
+const lockers = new Set();
 
 addEventListener('beforeunload',e=>{
   if (lockers.size) {
@@ -21,7 +21,7 @@ function remove(object){
 const unload = new EventTarget(); // do we need events? now using for the test-page
 
 unload.lock = function(promise){
-  var release = () => remove(release);
+  const release = () => remove(release);
   add(release);
   if (promise) promise.finally(release);
   return release;
