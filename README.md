@@ -17,8 +17,8 @@ import unload from 'https://cdn.jsdelivr.net/gh/nuxodin/unloadLock@1.0.0/index.m
 // lock until a promise is pending
 
 input.addEventListener('input', event=>{
-  const savePromise = safeTheValue(input.value);
-  unload.lock(savePromise);
+  const promise = save(input.value);
+  unload.lock(promise);
 });
 
 // or use the returned release-funtion
